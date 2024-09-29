@@ -1,0 +1,207 @@
+/*** responsive larger than 450px screen*/
+  
+   @media (min-width: 450px) {
+    .tech-stack { min-width: calc(33.33% - 10px); }
+    .project-img { height: auto; }
+  
+  }
+  
+  
+  /*** responsive larger than 580px screen*/
+  
+  @media (min-width: 580px) {
+    :root {
+      --fs-1: 32px;
+      --fs-2: 24px;
+      --fs-3: 26px;
+      --fs-4: 18px;
+      --fs-6: 15px;
+      --fs-7: 15px;
+      --fs-8: 12px;
+    }
+  
+    .profile, article {
+      width: 520px;
+      margin-inline: auto;
+      padding: 50px;
+    }
+  
+    .article-title {
+      font-weight: var(--fw-600);
+      padding-bottom: 15px;
+    }
+  
+    .article-title::after {
+      width: 40px;
+      height: 5px;
+    }
+  
+    .icon-box {
+      width: 48px;
+      height: 48px;
+      border-radius: 12px;
+      font-size: 18px;
+    }
+  
+    main {
+      margin-top: 60px;
+      margin-bottom: 100px;
+    }
+  
+    .profile {
+      max-height: 180px;
+      margin-bottom: 30px;
+    }
+  
+    .profile.active { max-height: 584px; }
+    .profile-info { gap: 25px; }
+    .avatar-box { border-radius: 30px; }
+    .avatar-box img { width: 120px; border-radius: 30px; }
+    .info-content .title { padding: 5px 18px; }
+    .separator { margin: 32px 0; }
+
+    .about .article-title { margin-bottom: 20px; }
+    .about-text { margin-bottom: 70px; }
+  
+    .skill-item {
+      display: flex;
+      justify-content: flex-start;
+      align-items: flex-start;
+      gap: 18px;
+      padding: 30px;
+    }
+  
+    .skill-icon-box {
+      margin-bottom: 0;
+      margin-top: 5px;
+    }
+  
+    .skill-content-box { text-align: left; }
+  
+    .stacks-list {
+      gap: 50px;
+      margin: 0 -30px;
+      padding: 45px;
+      scroll-padding-inline: 45px;
+    }
+  
+    .tech-stack { min-width: calc(33.33% - 35px); }
+    .timeline-list { margin-left: 65px; }
+    .timeline-item:not(:last-child)::before { left: -40px; }
+  
+    .timeline-item::after {
+      height: 8px;
+      width: 8px;
+      left: -43px;
+    }
+  
+    .skills-item:not(:last-child) { margin-bottom: 25px; }
+    .project-img { border-radius: 16px; }
+  
+  }
+  
+  
+  @media (min-width: 768px) {
+    .profile, article { width: 700px; }
+    .has-scrollbar::-webkit-scrollbar-button { width: 100px; }
+  
+    .article-title { padding-bottom: 20px; }
+    .project-list { grid-template-columns: 1fr 1fr; }
+    .input-wrapper { grid-template-columns: 1fr 1fr; }
+  
+    .form-btn {
+      width: max-content;
+      margin-left: auto;
+    }
+  }
+
+  /*** responsive larger than 1024px screen*/
+  
+  @media (min-width: 1024px) {
+    :root {
+      --shadow-1: -4px 8px 24px hsla(0, 0%, 0%, 0.125);
+      --shadow-2: 0 16px 30px hsla(0, 0%, 0%, 0.125);
+      --shadow-3: 0 16px 40px hsla(0, 0%, 0%, 0.125);
+  
+    }
+
+    .profile, article {
+      width: 950px;
+      box-shadow: var(--shadow-5);
+    }
+  
+    main { margin-bottom: 60px; }
+  
+    .main-content {
+      position: relative;
+      width: max-content;
+      margin: auto;
+    }
+  
+    .skill-list {
+      grid-template-columns: 1fr 1fr;
+      gap: 20px 25px;
+    }
+  
+    .tech-stack { min-width: calc(25% - 38px); }
+    .project-list { grid-template-columns: repeat(3, 1fr); }
+
+  /*** responsive larger than 1250px screen*/
+  
+  @media (min-width: 1250px) {
+    body::-webkit-scrollbar { width: 20px; }
+    body::-webkit-scrollbar-track { background: var(--smoky-black); }
+    body::-webkit-scrollbar-thumb {
+      border: 5px solid var(--smoky-black);
+      background: hsla(0, 0%, 100%, 0.1);
+      border-radius: 20px;
+      box-shadow: inset 1px 1px 0 hsla(0, 0%, 100%, 0.11),
+                  inset -1px -1px 0 hsla(0, 0%, 100%, 0.11);
+    }
+  
+    body::-webkit-scrollbar-thumb:hover { background: hsla(0, 0%, 100%, 0.15); }
+    body::-webkit-scrollbar-button { height: 60px; }
+    .profile, article { width: auto; }
+    article { min-height: 100%; }
+  
+    main {
+      max-width: 1200px;
+      margin-inline: auto;
+      display: flex;
+      justify-content: center;
+      align-items: stretch;
+      gap: 25px;
+    }
+  
+    .main-content {
+      min-width: 75%;
+      width: 75%;
+      margin: 0;
+    }
+  
+    .profile {
+      position: sticky;
+      top: 60px;
+      max-height: max-content;
+      height: 100%;
+      margin-bottom: 0;
+      padding-top: 60px;
+      z-index: 1;
+    }
+  
+    .profile-info { flex-direction: column; }
+    .avatar-box img { width: 150px; border-radius: 30px; }
+    .info-content .name {
+      white-space: nowrap;
+      text-align: center;
+    }
+  
+    .separator:last-of-type {
+      margin: 15px 0;
+      opacity: 0;
+    }
+  
+    .social-list { justify-content: center; }
+    .timeline-text { max-width: 700px; }
+  
+  }}
